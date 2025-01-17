@@ -131,7 +131,7 @@ function App() {
   viewBox="0 0 1440 120" /* Adjust height to 120 for less vertical size */
 >
   <path
-    fill="#BFDBFE" /* Adjust to match the next section’s background color */
+    fill="#111827" /* Adjust to match the next section’s background color */
     fillOpacity="1"
     d="
       M0,60 
@@ -156,7 +156,7 @@ function App() {
 
 
       {/* Second Section */}
-      <div className="h-screen flex items-center  justify-center bg-blue-200 text-black">
+      <div className="h-screen flex items-center  justify-center bg-gray-900 text-white">
   <div className="flex flex-wrap max-w-7xl mx-auto">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center">
@@ -165,11 +165,11 @@ function App() {
       
       
     </div>
-    <h1 className="text-5xl pt-serif-bold text-black mb-6">
+    <h1 className="text-5xl pt-serif-bold text-white mb-6">
       Natural cuts &amp; styling
     </h1>
   </header>
-  <p className="text-gray-600 leading-relaxed text-2xl mb-8 pt-serif-regular">
+  <p className="text-gray-400 leading-relaxed text-2xl mb-8 pt-serif-regular">
     Designed to maintain your current colour, blend out a growing root or
     balance your blonde while providing full and demi-permanent coverage.
     Our custom kit can disguise grey-white hair.
@@ -196,10 +196,10 @@ function App() {
       <img src={organic} alt="100% Natural Products" className=" w-24 mt-5" />
     </div>
     <div className="ml-4">
-      <h4 className="text-2xl font-bold text-gray-800 font-[Playfair Display]">
+      <h4 className="text-2xl font-bold text-white font-[Playfair Display]">
         100% natural products
       </h4>
-      <p className="text-gray-600 text-lg font-[Poppins] leading-relaxed">
+      <p className="text-gray-400 text-lg font-[Poppins] leading-relaxed">
         We are well equipped with years of hair know-how, and ready to create
         your best look with natural products.
       </p>
@@ -212,10 +212,10 @@ function App() {
       <img src={heart} alt="Cruelty Free" className="w-24 " />
     </div>
     <div className="ml-4">
-      <h4 className="text-2xl font-bold text-gray-800 font-[Playfair Display]">
+      <h4 className="text-2xl font-bold text-white font-[Playfair Display]">
         Cruelty free
       </h4>
-      <p className="text-gray-600 text-lg font-[Poppins] leading-relaxed">
+      <p className="text-gray-400 text-lg font-[Poppins] leading-relaxed">
         Hair is our passion, and our passion shows on every client that walks
         out of our doors full of confidence.
       </p>
@@ -228,10 +228,10 @@ function App() {
       <img src={natural} alt="Non GMO" className="w-24 " />
     </div>
     <div className="ml-4">
-      <h4 className="text-2xl font-bold text-gray-800 font-[Playfair Display]">
+      <h4 className="text-2xl font-bold text-white font-[Playfair Display]">
         Non GMO
       </h4>
-      <p className="text-gray-600 text-lg font-[Poppins] leading-relaxed">
+      <p className="text-gray-400 text-lg font-[Poppins] leading-relaxed">
         If you have a look you want but don't know how to achieve, we can work
         together to form a plan for your hair.
       </p>
@@ -244,7 +244,7 @@ function App() {
 
            {/* Wavy Divider */}
 <svg
-  className=" bg-blue-200 ans w-full"
+  className=" bg-gray-900 ans w-full"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 120" /* Adjust height to 120 for less vertical size */
 >
