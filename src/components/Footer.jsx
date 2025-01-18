@@ -5,32 +5,30 @@ import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg
 
 function Footer() {
   return (
-    <footer className="bg-[#004d40] h-96 overflow-hidden text-white py-16">
+    <footer className="bg-[#004d40] text-white py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Left Section */}
-        <div className="space-y-4">
-          <img src={logo} alt="Angelic Logo" className='-translate-y-40' />
-          <div className="-translate-y-60">
+        <div className="space-y-6 text-center md:text-left">
+          <img src={logo} alt="Angelic Logo" className="mx-auto md:mx-0 w-60" />
           <p className="text-sm leading-relaxed">
             Experience luxury wellness at Angelic Salon & Spa today.
           </p>
-          <div className="space-y-2">
-            <p className="text-sm leading-relaxed">
+          <div className="space-y-4 text-sm">
+            <p>
               <strong>First Branch:</strong> Angelic unisex salon and spa,
               3rd floor, hotel k11 building, Kasturi Tower, Panchakki,
               Haldwani 263139
             </p>
-            <p className="text-sm leading-relaxed">
+            <p>
               <strong>Second Branch:</strong> Om Sai Tower, 2nd floor, Near
               Kurmanchal Bank Uncha Pul, Haldwani 263139
             </p>
           </div>
           <p className="text-xs text-gray-400">© 2021, Adgroovs.com</p>
-          </div>
         </div>
 
         {/* Middle Section */}
-        <div className="space-y-4">
+        <div className="space-y-4 text-center md:text-left">
           <h3 className="text-lg font-bold uppercase">Indulgence</h3>
           <p className="text-sm">
             <strong>Phone:</strong> +91-7464927777
@@ -47,8 +45,8 @@ function Footer() {
         </div>
 
         {/* Right Section */}
-        <div className="space-y-6">
-          <div className="flex space-x-4">
+        <div className="space-y-6 text-center md:text-left">
+          <div className="flex justify-center md:justify-start space-x-4">
             <a
               href="#"
               className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-200 transition"

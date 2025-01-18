@@ -31,6 +31,21 @@ button.learn-more {
   height: auto;
 }
 
+@media (max-width: 640px) {
+  button.learn-more {
+    background-color: #282936; /* Dark background for smaller screens */
+    border-radius: 9999px; /* Fully rounded button */
+    color: white; /* White text color for the button */
+  }
+
+  /* Ensure spans inherit text color */
+  button.learn-more .button-text {
+    color: white !important;
+  }
+}
+
+
+
 /* Circle Style */
 button.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -124,7 +139,7 @@ button.squiggleEffect {
 /* Hover Effect */
 button.squiggleEffect:hover {
   background-size: 200% 5px; /* Expand the squiggly pattern */
-  background-position: 200% 200%; /* Animate squiggle moving to the right */
+  background-position: 500% 200%; /* Animate squiggle moving to the right */
 }
 @keyframes waveEffect {
   0% {
