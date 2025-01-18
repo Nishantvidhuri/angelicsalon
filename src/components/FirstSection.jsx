@@ -3,6 +3,9 @@ import bgImage from '../assets/bgImage.png';
 import ImageCarousel from '../components/ImageCarousel';
 
 import '../css/style.css';
+import tagline1 from '../assets/tagline-1.png'
+import tagline2 from '../assets/tagline-2.png'
+
 import '@fontsource/playfair-display'; // All weights and styles
 
 function FirstSection() {
@@ -25,11 +28,10 @@ function FirstSection() {
         {/* Content Section */}
         <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white font-bold leading-tight">
-            Ancient Wisdom,
-            <br />
-            modern hair.
-          </h1>
+          
+          <img src={tagline1}/>
+          <img src={tagline2}/>
+
 
           {/* Buttons */}
           <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-5 mt-4">
