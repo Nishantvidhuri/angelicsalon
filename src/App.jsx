@@ -39,7 +39,7 @@ function App() {
   ];
 
   return (
-    <div className="w-screen bg-gray-900 overflow-x-hidden ">
+    <div className="w-screen bg-[#4B5563] overflow-x-hidden ">
       <Navbar/>
      
 
@@ -53,7 +53,7 @@ function App() {
 
            {/* Wavy Divider */}
 <svg
-  className=" bg-gray-900 translate-y-2  ans w-full"
+  className=" bg-[#4B5563] translate-y-2  ans w-full"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 120" /* Adjust height to 120 for less vertical size */
 >
