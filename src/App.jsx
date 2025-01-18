@@ -52,12 +52,12 @@ function App() {
       <SecondSection/>
 
            {/* Wavy Divider */}
-<svg
-  className=" bg-[#4B5563] translate-y-2  ans w-full"
+           <svg
+  className="bg-[#4B5563] translate-y-2 ans w-full"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 120" /* Adjust height to 120 for less vertical size */
 >
-  <path 
+  <path
     fill="#004d40" /* Adjust to match the next section’s background color */
     fillOpacity="1"
     d="
@@ -74,9 +74,10 @@ function App() {
       T1440,60 
       L1440,120 
       L0,120 
-      A"
+      Z"
   ></path>
 </svg>
+
   <Footer />
 
     </div>
