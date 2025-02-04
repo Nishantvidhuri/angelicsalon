@@ -32,6 +32,20 @@ function Navbar() {
     { to: "/q-a", label: "Q/A" },
   ];
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest(".mobile-menu")) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav
       className={`flex justify-between items-center px-5 sm:px-10 fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
@@ -49,7 +63,10 @@ function Navbar() {
       <div className="sm:hidden">
         <button
           className="text-3xl focus:outline-none transition-transform transform hover:scale-110"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent immediate closing
+            setIsMenuOpen(!isMenuOpen);
+          }}
         >
           ☰
         </button>
@@ -57,19 +74,12 @@ function Navbar() {
 
       {/* Mobile Horizontal Menu */}
       <div
-        className={`fixed top-0 right-0 h-[11%] w-full bg-black shadow-md flex items-center justify-center font-jakarta transform ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        } transition-transform duration-300`}
+        className={`fixed top-0 right-0 h-[11%] w-full bg-black shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
+          isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
-        {/* Close Button */}
-        <button
-          onClick={() => setIsMenuOpen(false)}
-          className="absolute top-8 right-5 text-xl text-white focus:outline-none"
-        >
-          ✖
-        </button>
-
-        {/* Menu Links - Adjusts text size based on screen width */}
+        {/* Menu Links (Displayed in X-axis) */}
         <div className="flex justify-between w-full px-4 sm:px-10 text-white">
           {navLinks.map((link) => (
             <NavLink
@@ -82,8 +92,7 @@ function Navbar() {
             </NavLink>
           ))}
         </div>
- </div>
-
+      </div>
 
       {/* Desktop Navigation with Hover Effect & Wavy Underline */}
       <div className="hidden sm:flex gap-10 text-xl">
