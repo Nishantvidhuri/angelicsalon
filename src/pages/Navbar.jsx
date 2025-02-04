@@ -64,25 +64,26 @@ function Navbar() {
         {/* Close Button */}
         <button
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-8 right-5 text-xl focus:outline-none"
+          className="absolute top-8 right-5 text-xl text-white focus:outline-none"
         >
           ✖
         </button>
 
-        {/* Menu Links (Displayed in X-axis) */}
-        <div className="flex gap-6 text-lg text-white ">
+        {/* Menu Links - Adjusts text size based on screen width */}
+        <div className="flex justify-between w-full px-4 sm:px-10 text-white">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className="px-4 py-2 text-xl font-medium transition-colors duration-200  hover:bg-gray-100 rounded-md"
+              className="flex-1 text-center px-2 sm:px-4 py-2 text-base sm:text-lg md:text-xl font-medium transition-all duration-200 hover:bg-gray-700 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </NavLink>
           ))}
         </div>
-      </div>
+ </div>
+
 
       {/* Desktop Navigation with Hover Effect & Wavy Underline */}
       <div className="hidden sm:flex gap-10 text-xl">
