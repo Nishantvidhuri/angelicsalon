@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         bacalisties: ['Bacalisties', 'cursive'],
+        dancing: ['"Dancing Script"', 'cursive'],
+        plex: ['"IBM Plex Mono"', 'monospace'],
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
     },
   },
