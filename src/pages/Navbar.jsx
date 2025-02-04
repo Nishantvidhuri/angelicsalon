@@ -74,13 +74,13 @@ function Navbar() {
 
       {/* Mobile Horizontal Menu */}
       <div
-        className={`fixed top-0 right-0 h-[11%] w-full bg-black shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
+        className={`fixed top-0 right-0  h-[15%] w-full bg-white  shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
           isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
         {/* Menu Links (Displayed in X-axis) */}
-        <div className="flex justify-between w-full px-4 sm:px-10 text-white">
+        <div className="flex justify-between w-full px-4 sm:px-10 text-black">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
