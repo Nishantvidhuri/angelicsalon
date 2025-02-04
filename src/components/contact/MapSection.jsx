@@ -56,16 +56,32 @@ function MapSection() {
         </div>
       </div>
 
-      {/* Google Map - Always Visible */}
-      <div className="w-full">
+      {/* Google Map with Wave at the Bottom */}
+      <div className="relative w-full">
         <iframe
           title="Google Map"
-          className="w-full h-[400px] md:h-screen rounded-lg shadow-lg"
+          className="w-full h-[400px] md:h-screen rounded-lg"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14159.567682403225!2d79.5291875!3d29.2395625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09bf0dea04325%3A0x6e6b262db0c02392!2sAngelic%20Unisex%20Salon%20%26%20Spa!5e0!3m2!1sen!2sin!4v1707050601311!5m2!1sen!2sin&zoom=18"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+
+        {/* Full-Width Responsive SVG Wave - Slightly Lower for Overlapping Effect */}
+        <div className="absolute bottom-[-5px] left-0 w-full">
+          <svg
+            className="w-full h-[50px] sm:h-[80px] md:h-[100px] lg:h-[120px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#004d40"
+              fillOpacity="1"
+              d="M0,60 Q72,100 144,60 T288,60 T432,60 T576,60 T720,60 T864,60 T1008,60 T1152,60 T1296,60 T1440,60 L1440,120 L0,120 Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );
