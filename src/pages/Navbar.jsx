@@ -57,7 +57,7 @@ function Navbar() {
 
       {/* Mobile Sidebar Menu (Compact Width, Opens from Right) */}
       <div
-        className={`fixed top-0 right-0 h-[50%] w-[40%] sm:w-1/2 bg-white shadow-xl transform ${
+        className={`fixed top-0 right-0 h-[50%] w-[40%] bg-white shadow-xl transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -77,14 +77,15 @@ function Navbar() {
             <NavLink
               key={link.to}
               to={link.to}
-              className="py-3 px-2 text-2xl ml-10  rounded-md transition-colors duration-200 hover:bg-gray-100"
+              className="py-3 px-2 text-2xl ml-10 rounded-md transition-colors duration-200 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </NavLink>
           ))}
         </div>
-      </div>
+    </div>
+
 
       {/* Desktop Navigation with Hover Effect & Wavy Underline */}
       <div className="hidden sm:flex gap-10 text-xl">
