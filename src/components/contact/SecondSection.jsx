@@ -4,33 +4,16 @@ function SecondSection() {
   return (
     <div className="w-full max-w-3xl mx-auto mb-10 bg-white px-5 sm:px-0">
       <form className="space-y-10 mt-24">
-        {/* Name Inputs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input
-            type="text"
-            placeholder="First name*"
-            className="w-full border-b pb-2 border-black focus:outline-none"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last name"
-            className="w-full border-b pb-2 border-black focus:outline-none"
-          />
-        </div>
+        
 
         {/* Contact Inputs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input
-            type="email"
-            placeholder="E-mail*"
-            className="w-full border-b pb-2 border-black focus:outline-none"
-            required
-          />
+          
           <input
             type="text"
             placeholder="Phone number"
-            className="w-full border-b pb-2 border-black focus:outline-none"
+            className="w-full sm:w-[204%]
+            border-b pb-2 border-black focus:outline-none"
           />
         </div>
 

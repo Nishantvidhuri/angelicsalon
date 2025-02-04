@@ -14,7 +14,7 @@ function FirstSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 sm:px-10 translate-y-[-50%] top-1/2">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center translate-x-[0%] sm:translate-x-[25%]  px-30 sm:px-10 translate-y-[-30%] sm:translate-y-[-70%] top-1/2">
         {/* Superheadline */}
         <span className="font-jakarta text-lg sm:text-xl font-extralight tracking-widest text-white uppercase mb-2">
           We are here for you
