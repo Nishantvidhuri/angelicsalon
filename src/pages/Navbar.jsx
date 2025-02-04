@@ -74,7 +74,7 @@ function Navbar() {
 
       {/* Mobile Horizontal Menu */}
       <div
-        className={`fixed top-0 right-0  h-[15%] w-full bg-white  shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
+        className={`fixed top-0 right-0  h-[12%] w-full bg-white  shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
           isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
