@@ -19,7 +19,7 @@ function Home() {
 
      {/* Wavy Divider */}
      <svg
-className="bg-[#4B5563] translate-y-2 ans w-full"
+className="bg-[#4B5563]  ans w-full"
 xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 1440 120" /* Adjust height to 120 for less vertical size */
 >

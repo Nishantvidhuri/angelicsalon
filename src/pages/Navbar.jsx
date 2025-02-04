@@ -37,7 +37,7 @@ function Navbar() {
     { to: '/Location', label: 'Location', icon: <FaMapMarkerAlt /> },
     { to: '/services', label: 'Services', icon: <FaConciergeBell /> },
     { to: '/q-a', label: 'Q/A', icon: <FaQuestionCircle /> },
-    { to: '/packages', label: 'Packages', icon: <FaGift /> },
+,
   ];
 
   return (
