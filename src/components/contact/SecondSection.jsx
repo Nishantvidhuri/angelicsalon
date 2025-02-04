@@ -17,28 +17,29 @@ function SecondSection() {
           />
         </div>
 
-        {/* Dropdown */}
-        <select
-          className="w-full border-b pb-4 text-xl border-black focus:border-black focus:ring-0 focus:outline-none"
-          required
-          defaultValue=""
-        >
-          <option value="" hidden>
-            —Please choose an option—
-          </option>
-          <option value="cut" className="bg-white hover:text-[#BD895A] hover:bg-transparent">
-            Cut
-          </option>
-          <option value="wash_style" className="bg-white hover:text-[#BD895A]">
-            Wash & style
-          </option>
-          <option value="braids" className="bg-white hover:text-[#BD895A]">
-            Braids
-          </option>
-          <option value="balayage" className="bg-white hover:text-[#BD895A]">
-            Balayage
-          </option>
-        </select>
+     {/* Dropdown */}
+<select
+  className="w-[100%] sm:w-[90%] md:w-[100%] border-b pb-4 text-lg sm:text-xl border-black focus:border-black focus:ring-0 focus:outline-none  px-4 py-3 bg-white"
+  required
+  defaultValue=""
+>
+  <option value="" hidden>
+    —Please choose an option—
+  </option>
+  <option value="cut" className="bg-white hover:text-[#BD895A] hover:bg-transparent py-2">
+    Cut
+  </option>
+  <option value="wash_style" className="bg-white hover:text-[#BD895A] py-2">
+    Wash & style
+  </option>
+  <option value="braids" className="bg-white hover:text-[#BD895A] py-2">
+    Braids
+  </option>
+  <option value="balayage" className="bg-white hover:text-[#BD895A] py-2">
+    Balayage
+  </option>
+</select>
+
 
         {/* Message Box */}
         <textarea
