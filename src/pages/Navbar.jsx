@@ -55,37 +55,34 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Sidebar Menu (Compact Width, Opens from Right) */}
+      {/* Mobile Horizontal Menu */}
       <div
-        className={`fixed top-0 right-0 h-[50%] w-[40%] bg-white shadow-xl transform ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-[11%] w-full bg-black shadow-md flex items-center justify-center font-jakarta transform ${
+          isMenuOpen ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-300`}
       >
         {/* Close Button */}
-        <div className="flex justify-end items-center p-5 border-b">
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="text-3xl focus:outline-none"
-          >
-            ✖
-          </button>
-        </div>
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-8 right-5 text-xl focus:outline-none"
+        >
+          ✖
+        </button>
 
-        {/* Menu Links */}
-        <div className="flex flex-col gap-4 px-5 mt-5 text-lg text-gray-800">
+        {/* Menu Links (Displayed in X-axis) */}
+        <div className="flex gap-6 text-lg text-white ">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className="py-3 px-2 text-2xl ml-10 rounded-md transition-colors duration-200 hover:bg-gray-100"
+              className="px-4 py-2 text-xl font-medium transition-colors duration-200  hover:bg-gray-100 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </NavLink>
           ))}
         </div>
-    </div>
-
+      </div>
 
       {/* Desktop Navigation with Hover Effect & Wavy Underline */}
       <div className="hidden sm:flex gap-10 text-xl">
