@@ -1,49 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom'; // Import useLocation
-import { FaHome, FaMapMarkerAlt, FaConciergeBell, FaQuestionCircle, FaGift } from 'react-icons/fa';
-import logo from '../assets/angelic salon.png';
-import '../css/style.css';
-import '@fontsource/playfair-display'; // All weights and styles
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/angelic salon.png";
+import "../css/style.css";
+import "@fontsource/playfair-display"; // All weights and styles
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [hoveredLink, setHoveredLink] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Track current route
+  const location = useLocation();
 
-  // Attach the scroll event listener
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight * 0.2);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Only runs once on mount
+  }, []);
 
-  // Reset the navbar state when switching routes
   useEffect(() => {
     setIsScrolled(window.scrollY > window.innerHeight * 0.2);
-  }, [location.pathname]); // Runs when the path changes
-
-  const handleMouseEnter = (link) => setHoveredLink(link);
-  const handleMouseLeave = () => setHoveredLink(null);
+  }, [location.pathname]);
 
   const navLinks = [
-    { to: '/', label: 'Home', icon: <FaHome /> },
-    { to: '/Location', label: 'Location', icon: <FaMapMarkerAlt /> },
-    { to: '/services', label: 'Services', icon: <FaConciergeBell /> },
-    { to: '/q-a', label: 'Q/A', icon: <FaQuestionCircle /> },
-,
+    { to: "/", label: "Home" },
+    { to: "/Location", label: "Location" },
+    { to: "/services", label: "Services" },
+    { to: "/q-a", label: "Q/A" },
   ];
 
   return (
     <nav
       className={`flex justify-between items-center px-5 sm:px-10 fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white shadow-md text-black' : 'bg-transparent text-white'
+        isScrolled ? "bg-white shadow-md text-black" : "bg-transparent text-white"
       }`}
     >
       {/* Logo */}
@@ -59,17 +51,18 @@ function Navbar() {
           className="text-3xl focus:outline-none transition-transform transform hover:scale-110"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? '✖' : '☰'}
+          ☰
         </button>
       </div>
 
-      {/* Navigation Links */}
+      {/* Mobile Sidebar Menu (Compact Width, Opens from Right) */}
       <div
-        className={`sm:flex flex-col sm:flex-row items-center gap-10 text-xl fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg transform ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } sm:relative sm:bg-transparent sm:shadow-none sm:translate-x-0 sm:w-auto sm:h-auto transition-transform duration-300`}
+        className={`fixed top-0 right-0 h-[50%] w-[40%] sm:w-1/2 bg-white shadow-xl transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300`}
       >
-        <div className="sm:hidden flex justify-end p-5">
+        {/* Close Button */}
+        <div className="flex justify-end items-center p-5 border-b">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="text-3xl focus:outline-none"
@@ -77,34 +70,43 @@ function Navbar() {
             ✖
           </button>
         </div>
-        <div className="flex flex-col sm:flex-row gap-5 items-center text-black sm:text-current">
+
+        {/* Menu Links */}
+        <div className="flex flex-col gap-4 px-5 mt-5 text-lg text-gray-800">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              style={{
-                borderBottom: 'none',
-                paddingBottom: '2px',
-                backgroundRepeat: 'repeat',
-                backgroundImage:
-                  hoveredLink === link.label
-                    ? `url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 18'%3E%3Cpath fill='none' stroke='${
-                        isScrolled ? 'black' : 'white'
-                      }' stroke-width='1' d='M0,17.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5'/%3E%3C/svg%3E")`
-                    : '',
-              }}
-              className={({ isActive }) =>
-                `squiggleEffect ${isActive ? 'font-semibold' : ''} ${
-                  isMenuOpen ? 'flex items-center gap-3' : ''
-                }`
-              }
-              onMouseEnter={() => handleMouseEnter(link.label)}
-              onMouseLeave={handleMouseLeave}
+              className="py-3 px-2 text-2xl ml-10  rounded-md transition-colors duration-200 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
             >
-              {isMenuOpen && link.icon} {link.label}
+              {link.label}
             </NavLink>
           ))}
         </div>
+      </div>
+
+      {/* Desktop Navigation with Hover Effect & Wavy Underline */}
+      <div className="hidden sm:flex gap-10 text-xl">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className="relative pb-2 transition-all duration-300 hover:text-gray-600"
+          >
+            {link.label}
+            {/* Wavy Underline Effect on Hover Only */}
+            <span
+              className="absolute left-0 bottom-[-6px] w-0 h-[3px] transition-all duration-500 ease-in-out hover:w-full"
+              style={{
+                background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Cpath fill='none' stroke='${
+                  isScrolled ? "black" : "white"
+                }' stroke-width='4' d='M0 15 Q 25 0 50 15 T 100 15'/%3E%3C/svg%3E") repeat-x`,
+                height: "12px",
+              }}
+            ></span>
+          </NavLink>
+        ))}
       </div>
     </nav>
   );
