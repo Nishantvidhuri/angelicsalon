@@ -19,6 +19,9 @@ function Services() {
         <FourthSection/>
         <Pricing />
         <Packages/>
+        <div className="translate-y-40 sm:translate-y-[50%]">
+        <ImageCarousel />
+      </div>
         <Footer/>
     </div>
   )

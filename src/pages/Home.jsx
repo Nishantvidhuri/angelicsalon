@@ -3,6 +3,7 @@ import FirstSection from '../components/FirstSection'
 import Navbar from './Navbar'
 import SecondSection from '../components/SecondSection'
 import Footer from '../components/Footer'
+import ThirdSection from '../components/services/ThirdSection'
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
 {/* First Section with the image */}
 <FirstSection/>
 
-
+<ThirdSection/>
 
 {/* Second Section */}
 <SecondSection/>

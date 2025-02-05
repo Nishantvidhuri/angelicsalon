@@ -41,11 +41,11 @@ const services = [
 
 function ThirdSection() {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 h-[150vh] w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 h-auto w-full">
       {services.map((service, index) => (
         <div
           key={index}
-          className={`relative flex flex-col items-center justify-center ${service.bg} transition-all duration-500 group`}
+          className={`relative flex flex-col items-center justify-center ${service.bg} transition-all duration-500 group min-h-[50vh]`}
         >
           {/* Background Image on Hover */}
           <div
@@ -58,14 +58,16 @@ function ThirdSection() {
           ></div>
 
           {/* Content */}
-          <h1 className="text-black text-[300px] -translate-y-20  font-jakarta  transition-all font-thin
-          duration-500 group-hover:text-white relative z-10">
+          <h1
+            className="text-black text-[22vw] md:text-[250px] lg:text-[300px] 
+            font-jakarta -translate-y-16  transition-all font-thin duration-500 group-hover:text-white relative z-10"
+          >
             {service.letter}
           </h1>
-          <h2 className="text-black text-3xl -translate-y-32 font-semibold transition-all duration-500 group-hover:text-white relative z-10">
+          <h2 className="text-black text-2xl md:text-3xl -translate-y-16 md:-translate-y-32 font-semibold transition-all duration-500 group-hover:text-white relative z-10">
             {service.title}
           </h2>
-          <p className="text-black text-lg max-w-[80%] text-center mt-2 -translate-y-20 transition-all duration-500 group-hover:text-white relative z-10">
+          <p className="text-black text-sm md:text-lg max-w-[80%] text-center mt-2 -translate-y-10 md:-translate-y-20 transition-all duration-500 group-hover:text-white relative z-10">
             {service.description}
           </p>
         </div>

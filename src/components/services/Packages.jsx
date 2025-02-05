@@ -4,16 +4,16 @@ import ImageCarousel from "../contact/ImageCarousel";
 const packages = [
   {
     title: "Hair Plus",
-    price: "₹16,500", // $200 converted
+    price: "₹16,500",
     features: ["Cutting", "Coloring", "Styling"],
     bgColor: "bg-[#D99874]",
     height: "h-[450px]",
     zIndex: "z-10",
-    position: "lg:-translate-x-20", // Moves left on large screens
+    position: "lg:-translate-x-24", // Moves left
   },
   {
     title: "Premium",
-    price: "₹41,500", // $500 converted
+    price: "₹41,500",
     features: ["Hair Pack", "Cutting", "Coloring"],
     bgColor: "bg-[#EAE3D2]",
     height: "h-[500px]",
@@ -22,18 +22,18 @@ const packages = [
   },
   {
     title: "Supreme",
-    price: "₹24,900", // $300 converted
+    price: "₹24,900",
     features: ["Hair Pack", "Cutting", "Styling"],
     bgColor: "bg-[#C4C3C3]",
     height: "h-[450px]",
     zIndex: "z-10",
-    position: "lg:translate-x-20", // Moves right on large screens
+    position: "lg:translate-x-24", // Moves right
   },
 ];
 
 function Packages() {
   return (
-    <div className="w-full flex flex-col items-center font-jakarta px-4 md:px-8">
+    <div className="w-full flex flex-col items-center font-jakarta px-4 md:px-8 relative">
       {/* Title */}
       <h3 className="text-sm md:text-lg uppercase tracking-widest text-gray-600 text-center">
         Specialized Hair Care
@@ -44,7 +44,7 @@ function Packages() {
 
       {/* Package Cards */}
       <div className="relative w-full max-w-7xl flex justify-center mt-16">
-        <div className="flex flex-col md:flex-row md:gap-8 items-center justify-center">
+        <div className="flex flex-col md:flex-row md:gap-10 items-center justify-center">
           {packages.map((pkg, index) => (
             <div
               key={index}
@@ -56,7 +56,7 @@ function Packages() {
               <h2 className="text-2xl md:text-3xl font-semibold">{pkg.title}</h2>
               <p className="text-3xl md:text-4xl font-bold mt-3">{pkg.price}</p>
 
-              {/* Vertical Line or Wavy Line */}
+              {/* Wavy Line */}
               <div className="my-6 flex justify-center">
                 {index === 0 ? (
                   <div className="w-[2px] h-12 md:h-16 bg-black"></div>
@@ -88,10 +88,8 @@ function Packages() {
         </div>
       </div>
 
-      {/* Image Carousel (Moved Responsively) */}
-      <div className="mt-16 md:mt-24 w-full max-w-7xl">
-        <ImageCarousel />
-      </div>
+      {/* Image Carousel Positioned at the Bottom */}
+      
     </div>
   );
 }

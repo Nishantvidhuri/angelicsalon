@@ -16,7 +16,7 @@ function FirstSection() {
         <img
           src={bgImage}
           alt="Background"
-          className="w-full h-full sm:h-fit object-cover object-[70%] translate-y- sm:object-center"
+          className="w-full h-screen  object-cover object-[70%] translate-y- sm:object-center"
         />
       </div>
 
@@ -61,7 +61,7 @@ function FirstSection() {
           </div>
 
           {/* Image Carousel */}
-          <div className="mt-10 sm:mt-40 h-40 xs:w-3/4">
+          <div className=" h-40 xs:w-3/4">
             <ImageCarousel />
           </div>
         </div>

@@ -41,15 +41,15 @@ const services = [
 
 function FourthSection() {
   return (
-    <div className="grid grid-cols-4 h-screen font-jakarta   w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto w-full font-jakarta">
       {services.map((service, index) => (
         <div
           key={index}
-          className={`relative flex flex-col items-center justify-center ${service.bg} transition-all duration-500 group overflow-hidden`}
+          className={`relative flex flex-col items-center justify-center ${service.bg} transition-all duration-500 group overflow-hidden min-h-[50vh]`}
         >
           {/* Background Image on Hover */}
           <div
-            className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-all duration-500"
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500"
             style={{
               backgroundImage: `url(${service.image})`,
               backgroundSize: "cover",
@@ -58,23 +58,21 @@ function FourthSection() {
           ></div>
 
           {/* Content */}
-          <h1 className="text-black text-[200px]   font-jakarta -translate-y-10 transition-all duration-500 group-hover:text-white relative z-10">
+          <h1
+            className="text-black text-[20vw] md:text-[150px] lg:text-[200px] 
+            font-jakarta -translate-y-10 transition-all duration-500 
+            group-hover:text-white relative z-10"
+          >
             {service.letter}
           </h1>
-          <h2 className="text-black text-2xl font-semibold -translate-y-10 mt-2 transition-all duration-500 group-hover:text-white relative z-10">
+          <h2 className="text-black text-xl md:text-2xl font-semibold -translate-y-6 md:-translate-y-10 mt-2 transition-all duration-500 group-hover:text-white relative z-10">
             {service.title}
           </h2>
-          <p className="text-black text-lg max-w-[80%] text-center mt-2 -translate-y-10 transition-all duration-500 group-hover:text-white relative z-10">
+          <p className="text-black text-sm md:text-lg max-w-[90%] text-center mt-2 -translate-y-4 md:-translate-y-10 transition-all duration-500 group-hover:text-white relative z-10">
             {service.description}
           </p>
-
-          
         </div>
-        
       ))}
-     <div className=" w-screen">
-    
-     </div>
     </div>
   );
 }
