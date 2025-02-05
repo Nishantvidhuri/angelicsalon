@@ -7,6 +7,7 @@ function FirstSectionService() {
       className="w-full h-screen bg-cover bg-center font-jakarta flex justify-center items-center px-6 sm:px-10"
       style={{
         backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: "right center", 
       }}
     >
       <div className="flex flex-col justify-center text-center lg:text-left max-w-3xl lg:max-w-4xl lg:translate-x-[-50%]">
