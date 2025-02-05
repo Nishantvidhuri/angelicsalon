@@ -86,7 +86,7 @@ function QandA() {
           {reviews.map((review, index) => (
             <ReviewCard
               key={index}
-              image={reviewImages[index] || "https://via.placeholder.com/150"} // Placeholder if API fails
+              image={reviewImages[index] } // Placeholder if API fails
               rating={review.rating}
               comment={review.comment}
             />
