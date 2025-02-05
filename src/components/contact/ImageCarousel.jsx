@@ -13,26 +13,24 @@ function ImageCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       slideImages();
-    }, 1000); // Change every 4 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
+    }, 1000); 
+    return () => clearInterval(interval); 
   }, [currentImages]);
 
   const slideImages = () => {
-    setIsSliding(true); // Start the sliding animation
+    setIsSliding(true); 
     setTimeout(() => {
-      // After the animation, rearrange the images
       setCurrentImages((prevImages) => {
         const [first, ...rest] = prevImages;
-        return [...rest, first]; // Move the first image to the end
+        return [...rest, first]; 
       });
-      setIsSliding(false); // Reset sliding state
-    }, 500); // Match the animation duration
+      setIsSliding(false); 
+    }, 500); 
   };
 
   return (
     <div className="overflow-hidden -translate-y-40  w-[80%] translate-x-[10%] sm:pt-16 flex justify-center">
-  {/* Carousel Wrapper */}
+ 
   <div
     className={`flex gap-4 ${
       isSliding ? 'transition-transform duration-500 ease-in-out' : ''
@@ -40,7 +38,7 @@ function ImageCarousel() {
     style={{
     transform: isSliding
       ? `translateX(${isLargeScreen ? '-21.2%' : '-55%'})`
-      : 'translateX(0)', // Conditional transform value
+      : 'translateX(0)', 
   }}
   >
     {currentImages.map((image, index) => (

@@ -4,7 +4,7 @@ import heart from '../assets/heart.png';
 import natural from '../assets/natural.png';
 
 import '../css/style.css';
-import '@fontsource/playfair-display'; // All weights and styles
+import '@fontsource/playfair-display'; 
 
 function SecondSection() {
   return (
@@ -43,9 +43,9 @@ function SecondSection() {
 
         </div>
 
-        {/* Right Column */}
+        
         <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 space-y-6">
-          {/* Service 1 */}
+          
           <div className="flex items-center gap-4">
             <div className="w-12 sm:w-16 lg:w-20 h-auto flex-shrink-0">
               <img src={organic} alt="100% Natural Products" className="w-full" />
@@ -60,7 +60,7 @@ function SecondSection() {
             </div>
           </div>
 
-          {/* Service 2 */}
+          
           <div className="flex items-center gap-4">
             <div className="w-12 sm:w-16 lg:w-20 h-auto flex-shrink-0">
               <img src={heart} alt="Cruelty Free" className="w-full" />
@@ -75,7 +75,7 @@ function SecondSection() {
             </div>
           </div>
 
-          {/* Service 3 */}
+          
           <div className="flex items-center gap-4">
             <div className="w-12 sm:w-16 lg:w-20 h-auto flex-shrink-0">
               <img src={natural} alt="Non GMO" className="w-full" />

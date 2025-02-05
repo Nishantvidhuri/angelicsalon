@@ -7,7 +7,6 @@ function Footer() {
   return (
     <footer className="bg-[#004d40] text-white py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-        {/* Left Section */}
         <div className="space-y-6 text-center md:text-left">
           <img src={logo} alt="Angelic Logo" className="mx-auto md:mx-0 w-60" />
           <p className="text-sm leading-relaxed">
@@ -27,7 +26,6 @@ function Footer() {
           <p className="text-xs text-gray-400">© 2021, Adgroovs.com</p>
         </div>
 
-        {/* Middle Section */}
         <div className="space-y-4 text-center md:text-left">
           <h3 className="text-lg font-bold uppercase">Indulgence</h3>
           <p className="text-sm">
@@ -44,7 +42,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Right Section */}
         <div className="space-y-6 text-center md:text-left">
           <div className="flex justify-center md:justify-start space-x-4">
             <a

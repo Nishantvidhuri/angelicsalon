@@ -5,16 +5,13 @@ import { MapPin, Phone, Clock, Calendar } from "lucide-react";
 function MapSection() {
   return (
     <div className="relative w-full h-auto flex flex-col items-center justify-center">
-      {/* Salon Info Card - Hidden on Small Screens */}
       <div className="hidden md:block absolute top-0 right-40 w-[400px] p-5">
-        {/* Image Section */}
         <img
           src={shopImage}
           alt="Salon Interior"
           className="w-full h-60 object-cover rounded-t-lg"
         />
 
-        {/* Wavy SVG */}
         <div className="relative -mt-6">
           <svg className="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
             <path
@@ -24,11 +21,9 @@ function MapSection() {
           </svg>
         </div>
 
-        {/* Content Section */}
         <div className="bg-[#B2B7AE] h-auto pt-10 p-5 rounded-b-lg font-jakarta text-black">
           <h2 className="text-2xl font-semibold">Salon & Shop</h2>
 
-          {/* Address */}
           <p className="flex items-start gap-2 mt-2">
             <MapPin size={20} className="text-black mt-1" />
             <span className="text-sm">
@@ -37,13 +32,11 @@ function MapSection() {
             </span>
           </p>
 
-          {/* Phone Number */}
           <p className="flex items-center gap-2 mt-2">
             <Phone size={20} className="text-black" />
             <span>+91-7464927777</span>
           </p>
 
-          {/* Working Hours */}
           <p className="flex items-center gap-2 mt-2">
             <Clock size={20} className="text-black" />
             <span>Mon-Fri: 14:00 - 20:00</span>
@@ -56,7 +49,6 @@ function MapSection() {
         </div>
       </div>
 
-      {/* Google Map with Wave at the Bottom */}
       <div className="relative w-full">
         <iframe
           title="Google Map"
@@ -67,7 +59,6 @@ function MapSection() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
 
-        {/* Full-Width Responsive SVG Wave - Slightly Lower for Overlapping Effect */}
         <div className="absolute bottom-[-5px] left-0 w-full">
           <svg
             className="w-full h-[50px] sm:h-[80px] md:h-[100px] lg:h-[120px]"

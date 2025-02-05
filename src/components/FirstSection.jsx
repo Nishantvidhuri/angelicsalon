@@ -11,7 +11,6 @@ import '@fontsource/playfair-display'; // All weights and styles
 function FirstSection() {
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
       <div className="absolute top-0 w-full h-full">
         <img
           src={bgImage}
@@ -20,22 +19,16 @@ function FirstSection() {
         />
       </div>
 
-      {/* Black Gradient Overlay for xs screens */}
       <div className="absolute top-0 w-full h-full bg-gradient-to-t from-black via-black/30 to-transparent sm:bg-none"></div>
 
-      {/* Content Overlay */}
       <div className="relative z-10 w-full h-full flex flex-col justify-center px-5 translate-y-20 sm:px-10 lg:px-[10%] gap-5 pt-40 sm:pt-28 lg:pt-40">
-        {/* Content Section */}
         <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
-          {/* Main Heading */}
           
           <img src={tagline1}/>
           <img src={tagline2}/>
 
 
-          {/* Buttons */}
           <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-5 mt-4">
-            {/* First Button */}
             <button className="mt-20 sm:mt-0 learn-more bg-[#282936] text-white sm:bg-transparent sm:text-inherit rounded-full">
   <span aria-hidden="true" className="circle">
     <span className="icon arrow"></span>
@@ -44,7 +37,6 @@ function FirstSection() {
 </button>
 
 
-            {/* Second Button */}
             <button
               className="relative text-sm sm:text-lg mt-16 sm:mt-0 lg:text-xl text-white"
               style={{ textDecoration: 'none' }}
@@ -60,7 +52,6 @@ function FirstSection() {
             </button>
           </div>
 
-          {/* Image Carousel */}
           <div className=" h-40 xs:w-3/4">
             <ImageCarousel />
           </div>

@@ -9,7 +9,6 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight * 0.2);
@@ -32,7 +31,6 @@ function Navbar() {
     { to: "/q-a", label: "Q/A" },
   ];
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMenuOpen && !event.target.closest(".mobile-menu")) {
@@ -52,14 +50,12 @@ function Navbar() {
         isScrolled ? "bg-white shadow-md text-black" : "bg-transparent text-white"
       }`}
     >
-      {/* Logo */}
       <div className="pt-3">
         <Link to="/">
           <img className="w-20 sm:w-24 h-20 sm:h-24" src={logo} alt="Logo" />
         </Link>
       </div>
 
-      {/* Hamburger Menu Button */}
       <div className="sm:hidden">
         <button
           className="text-3xl focus:outline-none transition-transform transform hover:scale-110"
@@ -72,7 +68,6 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Horizontal Menu */}
       <div
         className={`fixed top-0 right-0  h-[12%] w-full bg-white  shadow-md flex items-center justify-center font-jakarta transition-all duration-500 ease-in-out mobile-menu ${
           isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
@@ -94,7 +89,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Navigation with Hover Effect & Wavy Underline */}
       <div className="hidden sm:flex gap-10 text-xl">
         {navLinks.map((link) => (
           <NavLink
@@ -103,7 +97,6 @@ function Navbar() {
             className="relative pb-2 transition-all duration-300 hover:text-gray-600"
           >
             {link.label}
-            {/* Wavy Underline Effect on Hover Only */}
             <span
               className="absolute left-0 bottom-[-6px] w-0 h-[3px] transition-all duration-500 ease-in-out hover:w-full"
               style={{

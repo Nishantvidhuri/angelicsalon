@@ -4,7 +4,6 @@ import heroContact from "../../assets/hero_contact.jpg"; // Adjust the path as n
 function FirstSection() {
   return (
     <div className="relative w-full">
-      {/* Background Image */}
       <div className="w-full">
         <img
           src={heroContact}
@@ -13,19 +12,15 @@ function FirstSection() {
         />
       </div>
 
-      {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center translate-x-[0%] sm:translate-x-[25%]  px-30 sm:px-10 translate-y-[-30%] sm:translate-y-[-70%] top-1/2">
-        {/* Superheadline */}
         <span className="font-jakarta text-lg sm:text-xl font-extralight tracking-widest text-white uppercase mb-2">
           We are here for you
         </span>
 
-        {/* Main Heading */}
         <h1 className="font-jakarta font-extralight text-white text-4xl sm:text-5xl md:text-6xl">
           Contact us
         </h1>
 
-        {/* Description */}
         <p className="font-jakarta text-lg sm:text-xl md:text-2xl font-extralight text-white max-w-2xl mt-4">
           We are well equipped with years of hair know-how and ready to create
           your best look with natural products. Hair is our passion, and our
@@ -33,7 +28,6 @@ function FirstSection() {
         </p>
       </div>
 
-      {/* Wavy Divider */}
       <svg
         className="absolute bottom-0 w-full"
         xmlns="http://www.w3.org/2000/svg"

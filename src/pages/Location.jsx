@@ -17,16 +17,12 @@ function Location() {
       <ThirdSection />
       <ForthSection />
 
-      {/* White Space Between Sections */}
       <div className="bg-white w-full h-10 sm:h-16"></div>
-
-      {/* Map Section */}
       <MapSection />
 
       
       
 
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -13,21 +13,21 @@ function ImageCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       slideImages();
-    }, 1000); // Change every 4 seconds
+    }, 1000); 
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, [currentImages]);
 
   const slideImages = () => {
-    setIsSliding(true); // Start the sliding animation
+    setIsSliding(true);
     setTimeout(() => {
-      // After the animation, rearrange the images
+      
       setCurrentImages((prevImages) => {
         const [first, ...rest] = prevImages;
-        return [...rest, first]; // Move the first image to the end
+        return [...rest, first]; 
       });
-      setIsSliding(false); // Reset sliding state
-    }, 500); // Match the animation duration
+      setIsSliding(false); 
+    }, 500); 
   };
 
   return (

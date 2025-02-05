@@ -5,7 +5,7 @@ import Location from './Location';
 import Services from './Services';
 import QA from './QandA';
 
-function AppRoutes() { // Rename to avoid conflict with React Router's Routes
+function AppRoutes() { 
   return (
     <Routes>
       <Route path="/" element={<Home />} />

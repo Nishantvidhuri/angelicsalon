@@ -6,7 +6,6 @@ function SecondSection() {
       <form className="space-y-10 mt-24">
         
 
-        {/* Contact Inputs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           
           <input
@@ -17,7 +16,6 @@ function SecondSection() {
           />
         </div>
 
-     {/* Dropdown */}
 <select
   className="w-[100%] sm:w-[90%] md:w-[100%] border-b pb-4 text-lg sm:text-xl border-black focus:border-black focus:ring-0 focus:outline-none  px-4 py-3 bg-white"
   required
@@ -41,14 +39,12 @@ function SecondSection() {
 </select>
 
 
-        {/* Message Box */}
         <textarea
           placeholder="Message"
           className="w-full border-b pb-4 text-xl border-black focus:border-black focus:outline-none"
           rows="4"
         ></textarea>
 
-        {/* Privacy Policy Checkbox */}
         <div className="flex items-center">
           <input type="checkbox" id="privacy" className="mr-2" required />
           <label htmlFor="privacy" className="text-sm text-gray-600">
@@ -56,7 +52,6 @@ function SecondSection() {
           </label>
         </div>
 
-        {/* Submit Button */}
         <div className="w-40 h-10 border-2 border-black flex items-center justify-center">
           <button type="submit" className="w-full h-full text-black hover:bg-black hover:text-white transition">
             Submit

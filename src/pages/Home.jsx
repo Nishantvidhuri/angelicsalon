@@ -10,15 +10,11 @@ function Home() {
     <div>
      <Navbar/>
 
-{/* First Section with the image */}
 <FirstSection/>
 
 <ThirdSection/>
-
-{/* Second Section */}
 <SecondSection/>
 
-     {/* Wavy Divider */}
      <svg
 className="ans w-full"
 xmlns="http://www.w3.org/2000/svg"

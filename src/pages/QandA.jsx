@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"; 
-import ReviewCard from "../components/qanda/ReviewCard"; // Separate review card component
+import ReviewCard from "../components/qanda/ReviewCard"; 
 
 const faqData = [
   { question: "What services do you offer?", answer: "We specialize in precision cutting, balayage, creative hair coloring, and keratin smoothing treatments." },
@@ -21,13 +21,13 @@ function QandA() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Fetch images using Fetch API
+  
   useEffect(() => {
     const fetchReviewImages = async () => {
       try {
         const response = await fetch("https://randomuser.me/api/?results=9");
         const data = await response.json();
-        setReviewImages(data.results.map(user => user.picture.large)); // Extracts user images
+        setReviewImages(data.results.map(user => user.picture.large)); 
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -49,10 +49,8 @@ function QandA() {
 
   return (
     <div className="w-full font-jakarta">
-      {/* Navbar */}
       <Navbar />
 
-      {/* FAQ Section */}
       <div className="w-full flex flex-col items-center px-6 sm:px-10 py-20 bg-gray-400">
         <h3 className="text-sm md:text-lg uppercase tracking-widest text-gray-600 text-center">Frequently Asked Questions</h3>
         <h2 className="text-2xl md:text-4xl font-semibold mt-3 text-center">Have Questions? We’ve Got Answers!</h2>
@@ -76,7 +74,6 @@ function QandA() {
         </div>
       </div>
 
-      {/* ⭐ Reviews Section */}
       <div className="w-full bg-gray-50 py-20 px-6 sm:px-10">
         <h2 className="text-2xl md:text-4xl font-semibold text-center">What Our Clients Say</h2>
         <p className="text-lg text-gray-600 text-center mt-2">Rated <span className="text-black font-bold">4.9/5</span> by 100+ happy clients</p>
@@ -86,7 +83,7 @@ function QandA() {
           {reviews.map((review, index) => (
             <ReviewCard
               key={index}
-              image={reviewImages[index] } // Placeholder if API fails
+              image={reviewImages[index] } 
               rating={review.rating}
               comment={review.comment}
             />
