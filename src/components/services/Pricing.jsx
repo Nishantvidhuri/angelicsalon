@@ -37,7 +37,7 @@ function Pricing() {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex justify-between w-full md:w-[1200px] border-b mb-12">
+      <div className="flex justify-between w-full md:w-[1200px]  border-b mb-12">
         {Object.keys(pricingData).map((tab) => (
           <button
             key={tab}
