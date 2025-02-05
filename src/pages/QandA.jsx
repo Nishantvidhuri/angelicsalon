@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import ReviewCard from "../components/qanda/ReviewCard"; // Separate review card component
 import axios from "axios";
 
+
 const faqData = [
   { question: "What services do you offer?", answer: "We specialize in precision cutting, balayage, creative hair coloring, and keratin smoothing treatments." },
   { question: "Do you use natural products?", answer: "Yes! We use 100% natural, cruelty-free, and non-GMO products for all treatments." },
