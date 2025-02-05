@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"; 
 import ReviewCard from "../components/qanda/ReviewCard"; // Separate review card component
-import axios from "axios";
-
 
 const faqData = [
   { question: "What services do you offer?", answer: "We specialize in precision cutting, balayage, creative hair coloring, and keratin smoothing treatments." },
@@ -23,12 +21,13 @@ function QandA() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Fetch images from the RandomUser API
+  // Fetch images using Fetch API
   useEffect(() => {
     const fetchReviewImages = async () => {
       try {
-        const response = await axios.get("https://randomuser.me/api/?results=9");
-        setReviewImages(response.data.results.map(user => user.picture.large)); // Extracts user images
+        const response = await fetch("https://randomuser.me/api/?results=9");
+        const data = await response.json();
+        setReviewImages(data.results.map(user => user.picture.large)); // Extracts user images
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -62,7 +61,7 @@ function QandA() {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              onClick={() => toggleFAQ(index)} // 🟢 Now, clicking anywhere opens/closes the answer!
+              onClick={() => toggleFAQ(index)} // Clicking anywhere toggles answer
               className="cursor-pointer border-b border-gray-300 py-4 px-6 bg-white rounded-md shadow-sm transition-all duration-300 mb-4"
             >
               <div className="w-full flex justify-between items-center text-left text-lg md:text-xl font-semibold text-gray-800">
